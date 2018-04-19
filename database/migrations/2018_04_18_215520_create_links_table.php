@@ -20,6 +20,7 @@ class CreateLinksTable extends Migration
             $table->string('name');
             $table->string('original_link');
             $table->string('redirect_link');
+            $table->boolean('active')->default(1);
             $table->timestamps();
 
             //foreing key
@@ -27,8 +28,6 @@ class CreateLinksTable extends Migration
                 ->references('id')->on('users')
                 ->onDelete('cascade');
 
-            //unique key
-            $table->unique('user_id', 'original_link');
         });
     }
 
