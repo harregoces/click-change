@@ -13,7 +13,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     <table class="table">
                         <tbody>
                             <tr>
